@@ -14,14 +14,14 @@ in {
 
   networking = {
     inherit hostName;
-    networkManager.enable = true;
+    networkmanager.enable = true;
   };
 
   services.xserver = {
     enable = true;
     layout = "us";
     xkbVariant = "";
-  }
+  };
 
   users.users = {
     alutiamez = {
@@ -35,7 +35,7 @@ in {
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "alutiamez" = import ../home.nix;
+      "alutiamez" = import ./home.nix;
     };
     useGlobalPkgs = true;
   };

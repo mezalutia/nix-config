@@ -1,6 +1,6 @@
 {...}: {
     imports = [
-        ./de/hyprland
+        # ./de/hyprland
 
         ./programs/kitty
         ./programs/git

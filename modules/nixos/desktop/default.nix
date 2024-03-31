@@ -1,7 +1,7 @@
 {...}: {
     imports = [
         # ./bluetooth.nix
-        # ./displaymanager.nix
+	./displaymanager.nix
         ./hyprland.nix
         ./nvidia.nix
         # ./pipwire.nix
