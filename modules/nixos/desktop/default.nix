@@ -1,9 +1,9 @@
 {...}: {
     imports = [
-        # ./bluetooth.nix
+        ./bluetooth.nix
 	./displaymanager.nix
         ./hyprland.nix
         ./nvidia.nix
-        # ./pipwire.nix
+        ./pipewire.nix
     ];
 }

@@ -40,6 +40,13 @@ in {
     useGlobalPkgs = true;
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+    ];
+  };
+
   # Enable automatic login for the user.
   # services.getty.autologinUser = "alutiamez";
 

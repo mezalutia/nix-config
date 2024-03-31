@@ -1,8 +1,8 @@
 {
   hardware = {
     bluetooth.enable = true;
-    bluetoth.powerOnBoot = true;
+    bluetooth.powerOnBoot = true;
   };
 
-  services.blueman.enable = true
+  services.blueman.enable = true;
 }
