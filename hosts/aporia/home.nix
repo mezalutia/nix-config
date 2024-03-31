@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../modules/home-manager/default.nix
+    ../../modules/modules/home
   ];
 
   # Home Manager needs a bit of information about you and the

@@ -24,5 +24,6 @@
     GBM_BACKEND = "nvidia-drm";
     __GLX_VEDNOR_LIBRARY_NAME = "nvidia";
     WLR_NO_HARDWARE_CURSORS = "1";
+    NIX_OZONE_WL = "1";
   };
 }

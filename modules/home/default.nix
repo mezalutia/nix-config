@@ -1,14 +1,9 @@
 {...}: {
     imports = [
-        # Terminal
-        ./kitty.nix
+        ./de/hyprland
 
-        # Browser
-        ./firefox.nix
-
-        # Code editor
-        ./vscode.nix
-
-        ./git.nix
+        ./programs/kitty
+        ./programs/git
+        ./programs/firefox
     ];
 }
