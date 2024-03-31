@@ -2,7 +2,8 @@
     imports = [
         ./de/hyprland
 	./de/rofi
-	./de/waybar
+	./de/eww
+	# ./de/waybar
 
         ./programs/kitty
         ./programs/git
