@@ -12,6 +12,19 @@ function Clock() {
   })
 }
 
+function ClientTitle() {
+  return Widget.Label({
+    class_name: "client-title",
+    label: hyprland.active.client.bind("title"),
+  })
+}
+
+function Workspaces() {
+  const activeId = hyprland.active.workspace.bind("id")
+  const workspaces = hyprland.bind("workspaces")
+    .as(ws => ws.map( ({ id }) ),
+}
+
 function Center() {
   return Widget.Box({
     children: [
