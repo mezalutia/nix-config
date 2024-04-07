@@ -9,6 +9,12 @@
   # paths it should manage.
   home.username = "alutiamez";
   home.homeDirectory = "/home/alutiamez";
+  home.packages = with pkgs; [
+    ripgrep
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  ];
+  
+  fonts.fontconfig.enable = true;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

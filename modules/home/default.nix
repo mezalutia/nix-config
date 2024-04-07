@@ -9,5 +9,6 @@
     ./programs/git
     ./programs/firefox
     ./programs/vscode
+    ./programs/nixvim
   ];
 }
