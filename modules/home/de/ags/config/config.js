@@ -22,7 +22,16 @@ function ClientTitle() {
 function Workspaces() {
   const activeId = hyprland.active.workspace.bind("id")
   const workspaces = hyprland.bind("workspaces")
-    .as(ws => ws.map( ({ id }) ),
+    .as(ws => ws.map( ({ id }) => Widget.Button({
+      on_clicked: () => hyprland.messageAsync(`dispatch workspace ${id}`),
+      child: Widget.Label(`${id}`),
+      class_name: activeId.as(active => `${active === id ? "focused" : "" }`)
+    })))
+
+  return Widget.Box({
+    class_name: "workspace",
+    children: workspaces,
+  })
 }
 
 function Center() {
@@ -33,13 +42,23 @@ function Center() {
   })
 }
 
+function Left() {
+  return Widget.Box({
+    children: [
+      Workspaces(),
+      ClientTitle(),
+    ]
+  })
+}
+
 function Bar(monitor = 0) { 
   return Widget.Window({
     name: `bar-${monitor}`,
     anchor: ['top', 'left', 'right'],
     exclusivity: "exclusive",
     child: Widget.CenterBox({
-      center_widget: Center()
+      start_widget: Left(),
+      center_widget: Center(),
     })
   })
 }

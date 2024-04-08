@@ -16,4 +16,9 @@
       accountsservice
     ];
   };
+
+  home.packages = with pkgs; [
+    bun
+  ];
+
 }
