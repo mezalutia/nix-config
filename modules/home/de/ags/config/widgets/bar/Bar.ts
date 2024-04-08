@@ -4,9 +4,9 @@ import Workspaces from "./buttons/Workspaces";
 export default (monitor: number = 0) => Widget.Window({
   monitor: monitor,
   class_name: "bar",
-  name: `bar${monitor}`,
+  name: `bar${monitor}`, // Name HAS to be unique
   exclusivity : "exclusive",
-  anchor: ["left", "top", "left"],
+  anchor: ["top", "left", "right"],
   child: Widget.CenterBox({
     startWidget: Widget.Box({
       children: [
