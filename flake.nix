@@ -15,10 +15,12 @@
     }; 
 
     ags.url = "github:Aylur/ags";
+    matugen.url = "github:InioX/matugen";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = {
+      system = "x86_64-linux";
       default = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [

@@ -20,6 +20,8 @@
   home.packages = with pkgs; [
     bun
     sass
+    swww
+    inputs.matugen.packages.${system}.default
   ];
 
 }
