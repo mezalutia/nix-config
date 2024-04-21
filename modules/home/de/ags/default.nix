@@ -21,6 +21,7 @@
     bun
     sass
     swww
+    fd
     inputs.matugen.packages.${system}.default
   ];
 

@@ -1,5 +1,4 @@
 const entry = `${App.configDir}/main.ts`;
-const style = `${App.configDir}/style.scss`;
 const outdir = '/tmp/ags/';
 
 try {
@@ -10,8 +9,6 @@ try {
     '--external', 'gi://*',
   ]); 
   await import(`file://${outdir}/main.js`);
-  Utils.exec(`sass ${style} ${outdir}/style.css`);
-  App.applyCss(`${outdir}/style.css`);
 } catch (error) {
   console.error(error);
 };
