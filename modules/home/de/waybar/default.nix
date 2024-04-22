@@ -1,7 +1,8 @@
-{ ... }: {
-  programs.waybar = {
+{ pkgs, ... }: {
+  programs.waybar = with pkgs; {
     enable = true;
-    # settings = builtins.fromJSON (builtins.readFile ./config.jsonc);
-    # style = builtins.readFile ./style.css;
+    #style = builtins.readFile ./style.css;
   };
+
+  xdg.configFile."waybar/config".source = ./config.jsonc;
 }

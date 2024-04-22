@@ -1,5 +1,11 @@
 .bar {
   background-color: $bg;
+
+  .workspaces {
+    button {
+      background-color: $fg; 
+    }
+  }
 }
 
 label {

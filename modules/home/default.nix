@@ -5,6 +5,7 @@
     ./de/ags
     # ./de/waybar
 
+    ./programs/nautilus
     ./programs/kitty
     ./programs/git
     ./programs/firefox
