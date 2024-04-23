@@ -5,23 +5,21 @@ const dispatch_ws = (id: string | number) => {
 }
 
 export default () => {
-  const activeId = hyprland.active.workspace.bind("id"); // Get the id of the active workspace
   const workspaces = hyprland.bind("workspaces")
-    .as(ws => ws.map ( ({ id }) => Widget.Button({ // Make a button for each workspace
-      class_name: "workspace",
-      attribute: id,
-      on_clicked: () => dispatch_ws(id), // If clicked, switch to the workspace corresponding to this button
-      // child: Widget.Label(`${id}`),
-      // class_name: activeId.as(active => `${active === id ? "focused" : ""}`), // If the active workspace changes, check if the id corresponding to this button matches (styling purposes)
-      setup: (self) => {
-        self.hook(hyprland, () => {
-          self.toggleClassName("active", hyprland.active.workspace.id == id);
-        })
-      },
-    })));
+    .as(ws => ws.map(({ id }) => {
+      return Widget.Button({ 
+        class_name: "workspace",
+        attribute: id,
+        on_clicked: () => dispatch_ws(id), 
+        // child: Widget.Label(`${id}`),
+        setup: (self) => {
+          self.hook(hyprland.active.workspace, () => self.toggleClassName("active", hyprland.active.workspace.id == id));
+        },
+      })
+    }));
 
     return Widget.Box({
-      class_name: "workspaces",
+      class_name: "workspaces bar-element",
       children: workspaces,
     });
 };

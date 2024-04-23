@@ -10,8 +10,8 @@
   home.username = "alutiamez";
   home.homeDirectory = "/home/alutiamez";
   home.packages = with pkgs; [
-    ripgrep
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    networkmanagerapplet
+    (nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" ]; })
   ];
   
   fonts.fontconfig.enable = true;

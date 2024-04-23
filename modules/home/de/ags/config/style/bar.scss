@@ -1,0 +1,65 @@
+.bar {
+  background-color: transparentize($bg, 0.1);
+  min-height: 2rem;
+  padding: 0.4rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  border-radius: 15rem;
+  border-style: solid;
+  border-width: 0.1rem;
+
+  .bar-element {
+    background-color: #2d2d2d;
+    border-radius: 15rem;
+    padding: 0 1rem;
+  }
+
+  .system-tray {
+    margin: 0 2rem;
+  }
+
+  .workspaces {
+    padding: 0.3rem;
+
+    .workspace {
+      background: $fg_alt; 
+      min-width: 1.5rem;
+      margin: 0 0.25rem;
+      border-radius: 15rem;
+      transition: 100ms linear;
+
+      &.active {
+        background: $fg;
+        min-width: 2.5rem;
+      }
+    }
+  }
+}
+
+menu {
+  background-color: $bg;
+  padding: 1rem;
+  border-radius: 1rem;
+  border-style: solid;
+	border-width: 0.1rem;
+
+  separator {
+    min-height: 0.05rem;
+    margin: 0.5rem 0;
+    background-color: $fg;
+  }
+
+  menuitem {
+    border-radius: 0;
+    transition: 100ms linear;
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: $fg;
+    }
+  }
+}
+
+label {
+  color: #ffffff;
+}
