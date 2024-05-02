@@ -11,5 +11,6 @@
     ./programs/firefox
     ./programs/vscode
     ./programs/nixvim
+    ./programs/vesktop
   ];
 }

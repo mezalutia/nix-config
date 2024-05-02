@@ -1,6 +1,7 @@
 import Time from "./buttons/Date";
 import Workspaces from "./buttons/Workspaces";
 import systray from "./buttons/systray";
+import volume from "./buttons/volume";
 
 export default (monitor: number = 0) => Widget.Window({
   monitor: monitor,
@@ -20,10 +21,6 @@ export default (monitor: number = 0) => Widget.Window({
     }),
     centerWidget: Widget.Box({
       children: [
-        Widget.Label({
-          class_name: "bar-element",
-          label: "Masayoshi Soken - Find the Flame"
-        }),
       ],
     }),
     endWidget: Widget.Box({
@@ -32,6 +29,7 @@ export default (monitor: number = 0) => Widget.Window({
       hpack: "end",
       children: [
         systray(),
+        volume(),
         Time(),
       ],
     }),
