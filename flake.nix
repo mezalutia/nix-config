@@ -14,6 +14,7 @@
         inputs.nixpkgs.follows = "nixpkgs";
     }; 
 
+    hyprlock.url = "github:hyprwm/hyprlock";
     ags.url = "github:Aylur/ags";
     matugen.url = "github:InioX/matugen";
   };

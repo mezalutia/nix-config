@@ -1,4 +1,4 @@
-const audio = await Service.import("audio");
+const Audio = await Service.import("audio");
 
 export default () => {
   const icon = Widget.Label({
@@ -8,9 +8,9 @@ export default () => {
   const slider = Widget.Slider({
     hexpand: true,
     draw_value: false,
-    on_change: ({ value }) => audio.speaker.volume = value,
-    setup: self => self.hook(audio.speaker, () => {
-      self.value = audio.speaker.volume || 0
+    on_change: ({ value }) => Audio.speaker.volume = value,
+    setup: self => self.hook(Audio.speaker, () => {
+      self.value = Audio.speaker.volume || 0
     }),
   });
 

@@ -1,11 +1,11 @@
-const hyprland = await Service.import("hyprland");
+const Hyprland = await Service.import("hyprland");
 
 const dispatch_ws = (id: string | number) => {
-  hyprland.messageAsync(`dispatch workspace ${id}`);
+  Hyprland.messageAsync(`dispatch workspace ${id}`);
 }
 
 export default () => {
-  const workspaces = hyprland.bind("workspaces")
+  const workspaces = Hyprland.bind("workspaces")
     .as(ws => ws.map(({ id }) => {
       return Widget.Button({ 
         class_name: "workspace",
@@ -13,7 +13,7 @@ export default () => {
         on_clicked: () => dispatch_ws(id), 
         // child: Widget.Label(`${id}`),
         setup: (self) => {
-          self.hook(hyprland.active.workspace, () => self.toggleClassName("active", hyprland.active.workspace.id == id));
+          self.hook(Hyprland.active.workspace, () => self.toggleClassName("active", Hyprland.active.workspace.id == id));
         },
       })
     }));

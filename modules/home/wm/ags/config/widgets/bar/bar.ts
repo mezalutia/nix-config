@@ -1,7 +1,7 @@
-import Time from "./buttons/Date";
-import Workspaces from "./buttons/Workspaces";
-import systray from "./buttons/systray";
-import volume from "./buttons/volume";
+import Time from "./buttons/date";
+import Workspaces from "./buttons/workspaces";
+import Systray from "./buttons/systray";
+import Volume from "./buttons/volume";
 
 export default (monitor: number = 0) => Widget.Window({
   monitor: monitor,
@@ -28,8 +28,8 @@ export default (monitor: number = 0) => Widget.Window({
       vexpand: true,
       hpack: "end",
       children: [
-        systray(),
-        volume(),
+        Systray(),
+        Volume(),
         Time(),
       ],
     }),

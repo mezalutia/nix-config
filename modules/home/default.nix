@@ -1,9 +1,9 @@
 { inputs, ... }: {
   imports = [
-    ./de/hyprland
-    ./de/rofi
-    ./de/ags
-    # ./de/waybar
+    ./wm/hyprland
+    ./wm/rofi
+    ./wm/ags
+    # ./wm/waybar
 
     ./programs/nautilus
     ./programs/kitty
