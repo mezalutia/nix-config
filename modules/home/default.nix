@@ -1,6 +1,6 @@
 { inputs, ... }: {
   imports = [
-    ./wm/hyprland
+    ./wm/hypr/hyprland
     ./wm/rofi
     ./wm/ags
     # ./wm/waybar

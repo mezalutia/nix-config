@@ -15,6 +15,7 @@
     }; 
 
     hyprlock.url = "github:hyprwm/hyprlock";
+    hypridle.url = "github:hyprwm/hypridle";
     ags.url = "github:Aylur/ags";
     matugen.url = "github:InioX/matugen";
   };
