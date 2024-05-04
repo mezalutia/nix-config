@@ -4,7 +4,7 @@
     programs.steam.gamescopeSession.enable = true;
     programs.gamemode.enable = true;
 
-    home.packages = with pkgs; [
+    environment.systemPackages = with pkgs; [
       mangohud
     ];
 }

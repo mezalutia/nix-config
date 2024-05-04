@@ -5,6 +5,7 @@
     ./hyprland.nix
     ./nvidia.nix
     ./pipewire.nix
-    # ./xpadneo.nix
+    ./steam.nix
+    ./xpadneo.nix
   ];
 }

@@ -3,9 +3,7 @@
     ./wm/hypr/hyprland
     ./wm/hypr/hyprlock
     ./wm/wlogout
-    ./wm/rofi
     ./wm/ags
-    # ./wm/waybar
 
     ./programs/nautilus
     ./programs/kitty
@@ -14,5 +12,6 @@
     ./programs/vscode
     ./programs/nixvim
     ./programs/vesktop
+    ./programs/wezterm
   ];
 }

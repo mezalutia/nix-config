@@ -20,6 +20,7 @@ export default () => {
 
     return Widget.Box({
       class_name: "workspaces bar-element",
+      // TODO: sort workspaces by id
       children: workspaces,
     });
 };
