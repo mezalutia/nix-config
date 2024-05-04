@@ -1,6 +1,8 @@
 { inputs, ... }: {
   imports = [
     ./wm/hypr/hyprland
+    ./wm/hypr/hyprlock
+    ./wm/wlogout
     ./wm/rofi
     ./wm/ags
     # ./wm/waybar
