@@ -16,8 +16,8 @@
     ./programs/wezterm
     ./programs/fish
     ./programs/starship
-    ./programs/transcribe
+    # ./programs/transcribe
     ./programs/yt-dlp
-    ./programs/flameshot
+    # ./programs/flameshot
   ];
 }
