@@ -1,9 +1,9 @@
 [
   {
-      "label" : "lock",
-      "action" : "hyprlock",
-      "text" : "Lock",
-      "keybind" : "l"
+    "label" : "lock",
+    "action" : "hyprlock",
+    "text" : "Lock",
+    "keybind" : "l"
   },
   {
     "label" : "hibernate",

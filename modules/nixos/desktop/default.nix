@@ -7,5 +7,6 @@
     ./pipewire.nix
     ./steam.nix
     ./xpadneo.nix
+    ./polkit.nix
   ];
 }

@@ -22,7 +22,7 @@
     sass
     swww
     fd
-    inputs.matugen.packages.${system}.default
+    # inputs.matugen.packages.${system}.default
   ];
 
 }

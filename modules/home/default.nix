@@ -4,6 +4,7 @@
     ./wm/hypr/hyprlock
     ./wm/wlogout
     ./wm/ags
+    ./wm/wl-clipboard
 
     ./programs/nautilus
     ./programs/kitty
@@ -13,5 +14,10 @@
     ./programs/nixvim
     ./programs/vesktop
     ./programs/wezterm
+    ./programs/fish
+    ./programs/starship
+    ./programs/transcribe
+    ./programs/yt-dlp
+    ./programs/flameshot
   ];
 }

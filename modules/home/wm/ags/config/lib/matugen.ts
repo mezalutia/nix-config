@@ -1,9 +1,9 @@
-export async function matugen(
-  arg: string
-) {
-  const colors = await Utils.execAsync(`matugen --dry-run -j hex image ${arg}`);
-  const c = JSON.parse(colors).colors as { light: Colors, dark: Colors };
-}
+//export async function matugen(
+//  arg: string
+//) {
+//  const colors = await Utils.execAsync(`matugen --dry-run -j hex image ${arg}`);
+//  const c = JSON.parse(colors).colors as { light: Colors, dark: Colors };
+//}
 
 // https://github.com/Aylur/dotfiles/blob/92392878b9fb73c0fd0496f710448b075cacb995/ags/lib/matugen.ts#L64
 type Colors = {

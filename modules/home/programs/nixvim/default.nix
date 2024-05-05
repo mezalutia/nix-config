@@ -6,7 +6,8 @@
   programs.nixvim = {
     enable = true;
 
-    colorschemes.gruvbox.enable = true;
+    colorschemes.catppuccin.enable = true;
+    colorschemes.catppuccin.settings.flavour = "mocha";
 
     plugins = {
       neo-tree.enable = true;
