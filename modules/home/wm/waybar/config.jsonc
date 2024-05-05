@@ -1,0 +1,9 @@
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["wireplumber", "bluetooth"],
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    }
+}
