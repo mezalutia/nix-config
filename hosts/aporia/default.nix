@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, myvars, ... }:
 let 
   hostName = "desktop";
 in {
@@ -26,18 +26,18 @@ in {
   };
 
   users.users = {
-    alutiamez = {
+    ${myvars.username} = {
       isNormalUser = true;
-      description = "alutiamez";
+      description = myvars.username;
       extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [];
     };
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit myvars; inherit inputs; };
     users = {
-      "alutiamez" = import ./home.nix;
+      ${myvars.username} = import ./home.nix;
     };
     useGlobalPkgs = true;
   };

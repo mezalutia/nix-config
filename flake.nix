@@ -20,11 +20,13 @@
     # matugen.url = "github:InioX/matugen";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: let
+    myvars = import ./vars;
+  in {
     nixosConfigurations = {
       system = "x86_64-linux";
       default = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit myvars; inherit inputs; };
         modules = [
           ./hosts/aporia
           inputs.home-manager.nixosModules.default

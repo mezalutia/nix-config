@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, myvars, ... }:
 
 {
   imports = [
@@ -7,8 +7,8 @@
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "alutiamez";
-  home.homeDirectory = "/home/alutiamez";
+  home.username = myvars.username;
+  home.homeDirectory = "/home/${myvars.username}";
   home.packages = with pkgs; [
     networkmanagerapplet
     (nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" ]; })
